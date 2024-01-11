@@ -48,21 +48,41 @@
 //}
 
 //5.
-/* let inputNumber = prompt("Введіть ціле число:");
+// let inputNumber = prompt("Введіть ціле число:");
+// let number = parseInt(inputNumber);
+// if (Number.isInteger(number) && number > 1) {
+//     let isPowerOf3 = false;
+//     for (let i = 0; Math.pow(3, i) <= number; i++) {
+//         if (Math.pow(3, i) === number) {
+//             isPowerOf3 = true;
+//             break;
+//         }
+//     }
+//     if (isPowerOf3) {
+//         console.log(`${number} можна отримати шляхом зведення числа 3 до деякої ступені.`);
+//     } else {
+//         console.log(`${number} не можна отримати шляхом зведення числа 3 до деякої ступені.`);
+//     }
+// } else {
+//     console.log("Введено некоректне число. Будь ласка, введіть ціле число більше за 1.");
+// }
+
+
+let inputNumber = prompt("Введіть ціле число:");
 let number = parseInt(inputNumber);
 if (Number.isInteger(number) && number > 1) {
-    let isPowerOf3 = false;
-    for (let i = 0; Math.pow(3, i) <= number; i++) {
-        if (Math.pow(3, i) === number) {
-            isPowerOf3 = true;
+    let isPrime = true;
+    for (let i = 2; i * i <= number; i++) {
+        if (number % i === 0) {
+            isPrime = false;
             break;
         }
     }
-    if (isPowerOf3) {
-        console.log(`${number} можна отримати шляхом зведення числа 3 до деякої ступені.`);
+    if (isPrime) {
+        console.log(`${number} є простим числом.`);
     } else {
-        console.log(`${number} не можна отримати шляхом зведення числа 3 до деякої ступені.`);
+        console.log(`${number} не є простим числом.`);
     }
 } else {
     console.log("Введено некоректне число. Будь ласка, введіть ціле число більше за 1.");
-} */
+}
